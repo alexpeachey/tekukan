@@ -3,10 +3,10 @@
  
  
 /* TEAM */
-  <your title>: <your name>
-  Site:
-  Twitter:
-  Location:
+  CEO: Alex Peachey
+  Site: http://www.tekukan.com
+  Twitter: tekukan
+  Location: Las Vegas, NV, USA
  
 /* THANKS */
   Names (& URL):
