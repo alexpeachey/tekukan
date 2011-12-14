@@ -5,3 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+if User.where('id = 1').count == 0
+  user = User.new(username: 'alex', email: 'alex.peachey@tekukan.com', password='Tekukan Admin!', password_confirmation='Tekukan Admin!')
+  user.admin = true
+  user.save
+end
