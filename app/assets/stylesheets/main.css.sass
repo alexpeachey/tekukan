@@ -1,0 +1,36 @@
+//Set up your application defaults here
+
+//Text colors and families
+$text: #333333
+$text_high: #CCCCCC
+$font: 'Times New Roman'
+$headline_font: Iceland
+
+//Colors
+$p_warm: #CCCCCC
+$p_warm_high: #FFFFFF
+$p_cool: #333333
+$p_cool_high: #000000
+
+@import mixins
+
+body
+  color: $text
+  font:
+    size: 1em
+    family: $font, Serif
+  header
+    h1
+      size: 3em
+      family: $headline_font, Sans-Serif
+  a
+    text-decoration: none
+    color: $text
+
+
+
+
+
+
+//Import all of your other SASS files here
+@import flash

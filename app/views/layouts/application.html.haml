@@ -1,0 +1,41 @@
+!!! 5
+/[if lt IE 7]
+  %html{ class: "no-js ie6 oldie", lang: "en" }
+/[if IE 7]
+  %html{ class: "no-js ie7 oldie", lang: "en" }
+/[if IE 8]>
+  %html{ class: "no-js ie8 oldie", lang: "en" }
+/[if gt IE 8]
+  %html{ class: "no-js" lang: "en" }
+%head
+  %meta{ charset: "utf-8" }
+  %meta{ 'http-equiv': "X-UA-Compatible", content: "IE=edge,chrome=1" }
+  %title= yield(:title) || 'Rails Template'
+  %meta{ name: "description", content: "" }
+  %meta{ name: "author", content: "" }
+  %meta{name: "viewport", content: "width=device-width, initial-scale=1.0"}
+  = stylesheet_link_tag 'application'
+  = javascript_include_tag 'modernizr'
+  = csrf_meta_tag
+  = yield(:head)
+%body
+  #container
+    = render 'shared/flash'
+    %header#site_header
+      = render 'shared/header'
+    #main{ role: 'main' }
+      =yield
+    %footer#site_footer
+      = render 'shared/footer'
+  = javascript_include_tag 'application'
+  /Replace UAXXXXXXXX1 with the site ID
+  :javascript
+    window._gaq = [['_setAccount','UAXXXXXXXX1'],['_trackPageview'],['_trackPageLoadTime']];
+    Modernizr.load({
+      load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
+    });
+  /Prompt IE 6 users to use Chrome Frame
+  /[if lt IE 7 ]
+    = javascript_include_tag '//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js'
+    :javascript
+      window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})});
