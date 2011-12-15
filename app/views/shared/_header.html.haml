@@ -1,0 +1,12 @@
+%header#site_header
+  %h1
+    %p= 'Tekukan'
+    = link_to image_tag('logo.png',alt: 'Tekukan: Digital Solutions To Enhance Your Online Presence',title: 'Tekukan: Digital Solutions To Enhance Your Online Presence'), root_url
+  %nav
+    %h2= "Digital Solutions To Enhance Your Online Presence"
+    %ul#main_menu
+      %li= link_to 'Home', root_url
+      %li= link_to 'Services', services_pages_path
+      %li= link_to 'Products', products_pages_path
+      %li= link_to 'Contact', '#'
+      %li= link_to 'Existing Clients', '#'

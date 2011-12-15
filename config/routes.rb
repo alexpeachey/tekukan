@@ -1,5 +1,14 @@
 RailsTemplate::Application.routes.draw do
-  resources :pages
+  
+  root to: 'pages#index'
+  
+  resources :pages do
+    collection do
+      get :unknown
+      get :services
+      get :products
+    end
+  end
 
   resources :users
 

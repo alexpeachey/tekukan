@@ -1,3 +1,50 @@
-// Place all the styles related to the Pages controller here.
-// They will automatically be included in application.css.
-// You can use Sass here: http://sass-lang.com/
+section#home_page, section#services, section#products
+  +clearfix
+  margin: 1em percentage(16/988)
+  width: percentage(956/988)
+
+section#home_page
+  img
+    float: left
+    width: percentage(500/956)
+    max-width: 500px
+    +border-radius
+  p
+    float: left
+    margin: 1em percentage(16/956)
+    width: percentage(424/956)
+    font-size: 2em
+    a
+      color: #333388
+      &:hover
+        text-decoration: underline
+        color: #3333FF
+
+section#products
+  ul
+    margin: 0
+    padding: 0
+    li
+      +clearfix
+      margin-bottom: 3em
+      padding: 0
+      list-style: none
+      img
+        float: left
+        width: percentage(500/956)
+        max-width: 500px
+        +border-radius
+      p
+        float: left
+        margin: 1em percentage(16/956)
+        width: percentage(424/956)
+        font-size: 1.25em
+        a
+          color: #333388
+          &:hover
+            text-decoration: underline
+            color: #3333FF
+        
+        
+    
+    

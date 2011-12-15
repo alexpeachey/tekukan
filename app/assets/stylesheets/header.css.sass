@@ -1,0 +1,65 @@
+header#site_header
+  +clearfix
+  margin: 1em percentage(16/1020)
+  width: percentage(988/1020)
+  background: image_url('pebbles.png')
+  +border-radius
+  +box-shadow(0px,-2px,2px)
+  h1
+    position: relative
+    float: left
+    margin: 0
+    width: percentage(200/988)
+    max-width: 200px
+    background-color: $background
+    +border-radius-left
+    p
+      +hide-visually
+    a
+      display: block
+      width: 100%
+      +border-radius-left
+      img
+        width: 100%
+        +border-radius-left
+  nav
+    margin-left: percentage(200/988)
+    +border-radius-right
+    h2
+      margin: 0
+      padding: 0.33em percentage(16/788)
+      min-height: 120px
+      background-color: $p_warm
+      background: $noise, -webkit-gradient(linear, 0% 0%, 0% 100%, from(#BBBBBB), to($p_warm))
+      background: $noise, -moz-linear-gradient(19%, 75% 90deg, #BBBBBB, $p_warm)
+      background: $noise, linear-gradient(#BBBBBB, $p_warm)
+      border-bottom: 2px inset $p_warm
+      font:
+        size: 3em
+        family: $headline_font, Sans-Serif
+    ul
+      +clearfix
+      margin: 0
+      padding: 0 percentage(8/788)
+      width: percentage(772/788)
+      background-color: #888888
+      background: $noise, -webkit-gradient(linear, 0% 0%, 0% 100%, from(#888888), to(#CCCCCC))
+      background: $noise, -moz-linear-gradient(19%, 75% 90deg, #888888, #CCCCCC)
+      background: $noise, linear-gradient(#888888, #CCCCCC)
+      +border-radius-right(5px,false,true)
+      li
+        +clearfix
+        float: left
+        display: block
+        a
+          display: block
+          padding: 0.25em 0.5em
+          font:
+            size: 1.5em
+            family: $headline_font, Sans-Serif
+          color: $text
+          font-weight: bold
+          &:hover
+            +text-shadow(0px,-1px,1px)
+          
+        

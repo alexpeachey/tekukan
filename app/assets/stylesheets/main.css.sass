@@ -11,11 +11,21 @@ $p_warm: #CCCCCC
 $p_warm_high: #FFFFFF
 $p_cool: #333333
 $p_cool_high: #000000
+$background: #D3D3D3
+
+//Noise
+$noise: image_url('noise.png')
 
 @import mixins
 
+html
+  width: 100%
+
 body
+  width: 100%
   color: $text
+  background-color: $background
+  background: $noise
   font:
     size: 1em
     family: $font, Serif
@@ -27,10 +37,25 @@ body
     text-decoration: none
     color: $text
 
-
-
+#container
+  width: percentage(1020/1020)
+  #main
+    +clearfix
+    margin: 1em percentage(16/1020)
+    width: percentage(988/1020)
+    min-height: 30em
+    background-color: $p_warm
+    background: $noise, -webkit-gradient(linear, 0% 0%, 0% 100%, from(#BBBBBB), to($p_warm))
+    background: $noise, -moz-linear-gradient(19%, 75% 90deg, #BBBBBB, $p_warm)
+    background: $noise, linear-gradient(#BBBBBB, $p_warm)
+    +border-radius
+    +box-shadow(0px,-2px,2px)
 
 
 
 //Import all of your other SASS files here
 @import flash
+@import header
+@import footer
+@import pages
+@import users

@@ -1,0 +1,32 @@
+footer#site_footer
+  +clearfix
+  margin: 1em percentage(16/1020)
+  padding: 1em percentage(16/1020)
+  width: percentage(956/1020)
+  background-color: #BBBBBB
+  background: $noise, -webkit-gradient(linear, 0% 0%, 0% 100%, from(#BBBBBB), to(#EEEEEE))
+  background: $noise, -moz-linear-gradient(19%, 75% 90deg, #BBBBBB, #EEEEEE)
+  background: $noise, linear-gradient(#BBBBBB, #EEEEEE)
+  +border-radius
+  +box-shadow(0px,-2px,2px)
+  text-align: center
+  a
+    display: inline-block
+    padding: 0 0.3em
+    background-color: $p_cool
+    background: $noise, -webkit-gradient(linear, 0% 0%, 0% 100%, from($p_cool), to(#888888))
+    background: $noise, -moz-linear-gradient(19%, 75% 90deg, $p_cool, #888888)
+    background: $noise, linear-gradient($p_cool, #888888)
+    +border-radius
+    color: $p_warm
+    +text-shadow(0px,-1px,1px,$p_cool)
+    font:
+      size: 2em
+      family: $headline_font, Sans-Serif
+    &:hover
+      background-color: $p_warm
+      background: $noise, -webkit-gradient(linear, 0% 0%, 0% 100%, from(#888888), to($p_warm))
+      background: $noise, -moz-linear-gradient(19%, 75% 90deg, #888888, $p_warm)
+      background: $noise, linear-gradient(#888888, $p_warm)
+      color: $p_cool
+      +text-shadow(0px,-1px,1px,$p_warm)

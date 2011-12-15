@@ -34,3 +34,38 @@
     display: table
   &:after
     clear: both
+    
+=border-radius($r: 5px)
+  -webkit-border-radius: $r
+  -moz-border-radius: $r
+  border-radius: $r
+
+=border-radius-left($r: 5px, $top: true, $bottom: true)
+  @if $top
+    -webkit-border-top-left-radius: $r
+    -moz-border-radius-topleft: $r
+    border-top-left-radius: $r
+  @if $bottom
+    -webkit-border-bottom-left-radius: $r
+    -moz-border-radius-bottomleft: $r
+    border-bottom-left-radius: $r
+
+=border-radius-right($r: 5px, $top: true, $bottom: true)
+  @if $top
+    -webkit-border-top-right-radius: $r
+    -moz-border-radius-topright: $r
+    border-top-right-radius: $r
+  @if bottom
+    -webkit-border-bottom-right-radius: $r
+    -moz-border-radius-bottomright: $r
+    border-bottom-right-radius: $r
+
+=box-shadow($x: 2, $y: 2, $blur: 2, $c: $p_cool)
+  -webkit-box-shadow: $x $y $blur $c
+  -moz-box-shadow: $x $y $blur $c
+  box-shadow: $x $y $blur $c
+
+=text-shadow($x: 2, $y: 2, $blur: 2, $c: $p_warm)
+  -webkit-text-shadow: $x $y $blur $c
+  -moz-text-shadow: $x $y $blur $c
+  text-shadow: $x $y $blur $c

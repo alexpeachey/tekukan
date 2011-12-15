@@ -6,4 +6,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
+//= require jquery-ui
+//= require jquery.cookie
+//= require respond
+//= require main
