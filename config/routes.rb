@@ -4,11 +4,11 @@ RailsTemplate::Application.routes.draw do
   match 'sign_out' => 'sessions#destroy', as: :sign_out
   resources :sessions, only: [:new,:create,:destroy]
   
-  resources :leads
+  resources :leads, only: [:new,:create]
 
   root to: 'pages#index'
   
-  resources :pages do
+  resources :pages, only: [:index] do
     collection do
       get :unknown
       get :services
