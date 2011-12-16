@@ -9,12 +9,14 @@
     %meta{name: "viewport", content: "width=device-width, initial-scale=1.0"}
     = stylesheet_link_tag '//fonts.googleapis.com/css?family=Iceland'
     = stylesheet_link_tag 'application'
+    = stylesheet_link_tag '//ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/vader/jquery-ui.css'
     = javascript_include_tag 'modernizr'
     = csrf_meta_tag
     = yield(:head)
   %body
     #container
-      = render 'shared/flash'
+      -flash.each do |name, msg|
+        = content_tag :div, msg, :class => "#{name}"
       = render 'shared/header'
       #main{ role: 'main' }
         =yield

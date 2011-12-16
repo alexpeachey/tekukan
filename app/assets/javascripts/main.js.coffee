@@ -22,3 +22,4 @@ window.GlobalSetups = () ->
 
 $ ->
   window.global_setups = window.GlobalSetups()
+  window.leads_controller = window.LeadsController()

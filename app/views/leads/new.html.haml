@@ -1,0 +1,31 @@
+%section#new_lead
+  = form_for @lead do |f|
+    -if @lead.errors.any?
+      #error_explanation
+        %h2= "#{pluralize(@lead.errors.count, "error")} prohibited this entry from being saved:"
+        %ul
+          - @lead.errors.full_messages.each do |msg|
+            %li= msg
+
+    .field
+      = f.label :name
+      = f.text_field :name
+    .field
+      = f.label :company
+      = f.text_field :company
+    .field
+      = f.label :email
+      = f.email_field :email
+    .field
+      = f.label :phone
+      = f.phone_field :phone
+    .field
+      = f.text_area :description
+    .actions
+      = f.submit 'Submit', disable_with: 'Submitting'
+  %aside#lead_instructions
+    %p#name_instruction= "Please fill out the form to the left, starting with your name. Once you've submitted the form, you can expect to hear from us in 1-3 business days."
+    %p#company_instruction= "Company is not required, though if this project is for a company it would help us in doing our initial due diligence to know your company's name."
+    %p#email_instruction= "You can either provide your email or phone number, but at least one is required so we can respond to your inquiry."
+    %p#phone_instruction= "It would be just grand if we had both your email and your phone number so we have multiple options for responding to your."
+    %p#description_instruction= "Please take a moment to tell us about what services you are interested in as well as information about any current websites, social media strategies, email marketing, and other attributes of your existing online presence. Please also let us know your time frame for this project."

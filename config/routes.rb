@@ -1,5 +1,7 @@
 RailsTemplate::Application.routes.draw do
   
+  resources :leads
+
   root to: 'pages#index'
   
   resources :pages do
