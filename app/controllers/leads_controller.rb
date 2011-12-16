@@ -8,6 +8,7 @@ class LeadsController < ApplicationController
     @lead = Lead.new(params[:lead])
     if @lead.save
       @errors = nil
+      LeadMailer.lead_notification(@lead).deliver
       respond_to do |format|
         format.html { redirect_to root_url, notice: 'Thank you for your inquiry. We will respond within 1-3 business days.'}
       end
